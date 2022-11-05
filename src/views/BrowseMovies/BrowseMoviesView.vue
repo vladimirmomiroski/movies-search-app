@@ -9,7 +9,7 @@
 
 <script>
 
-import Search from '../components/layout/search/Search.vue'
+import Search from '../../components/layout/search/Search.vue'
 export default {
   components: {
     Search
@@ -19,7 +19,7 @@ export default {
 <style>
 @media (min-width: 1024px) {
   .browse-movies-container {
-    min-height: 100vh;
+    min-height: calc(100vh - 154.31px);
     background-color: var(--color-light-dark)
   }
     

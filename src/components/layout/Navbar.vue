@@ -18,11 +18,24 @@
             >Browse Movies</router-link
           >
         </div>
-        <p class="m-0 ms-3 login px-3">Login</p>
+        <div @click="modalLogin.modalOpenHandler" class="m-0 ms-3 login ps-3">Login</div>
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+import { useModalLogin } from '../../stores/ModalLoginStore';
+export default {
+  data() {
+
+    const modalLogin = useModalLogin()
+
+
+    return { modalLogin }
+  }
+}
+</script>
 
 <style>
 .router-link-active {
@@ -34,6 +47,7 @@
   border-bottom: 1px solid var(--color-gray);
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 .title-logo {

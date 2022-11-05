@@ -10,17 +10,16 @@ export const useMoviesStore = defineStore("moviesStore", {
   actions: {
     fetchMoviesData(url) {
       this.loading = true;
-      axios.get(url).then((res) => {
+     axios.get(url).then((res) => {
         this.loading = false;
-        this.movies = res.data.items;
-        console.log(this.movies)
-      });
+        this.movies = res.data.items
+      }); 
     },
   },
   getters: {
     getMoviesLength() {
       return this.movies.length;
     }
-    
+      
   },
 });
